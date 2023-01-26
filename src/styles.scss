@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background: darkgray;
+  height: 745.6px;
+  min-width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+@font-face {
+  src: url("./OpenSans.ttf");
+  font-family: "OpenSans";
+  font-weight: 100;
+}
+
+.container {
+  height: 100%;
+  width: 412px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 5% 25% 15% 55%;
+  grid-template-columns: 100%;
+  justify-items: center;
+  font-family: OpenSans;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time {
+  margin: 3px 0 0 3px;
+  font-weight: bolder;
+  justify-self: left;
+}
+
+.weather {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60% 40%;
+}
+
+.description {
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.temperaturecont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.current {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 30%;
+  justify-items: center;
+  align-items: center;
+  font-weight: bolder;
+
+  .icon {
+    height: 70%;
+    aspect-ratio: 1;
+    background-image: url(./imgs/loading.png);
+    background-size: 100% 100%;
+  }
+
+  .city {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+
+.forecast {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto-fill, 12, 5%);
+
+  .node {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: grid;
+    grid-template-columns: 28% 36% 20%;
+    text-align: left;
+    margin-left: 5px;
+    align-items: center;
+  }
+}
